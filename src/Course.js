@@ -3,11 +3,18 @@ import Bootstrap from './images/bootstrap5.png';
 import Ccsharp from './images/ccsharp.png';
 import Frontend from './images/kompleweb.jpg';
 
+const courseMap ={
+    Angular,
+    Bootstrap,
+    Ccsharp,
+    Frontend,
+}
 function Course({courseName}) {
-    console.log(Angular);
-    console.log(courseName);
+    // console.log(Angular);
+    // console.log(courseName);
+    console.log(courseMap[courseName])
     return <div>
-        <img src={Angular} alt="" />
+        <img src={courseMap[courseName]} alt="course" />
     </div>;
 }
 
