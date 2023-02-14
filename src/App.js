@@ -12,13 +12,15 @@ function App() {
   const handleClick = () => {
     setCourses([...courses, getRandomCourse()]);
   };
+  const courseList = courses.map((course, index) => {
+    return <Course key={index} courseName={course} />;
+  });
   return (
     <div className="App">
-      <button onClick={handleClick}>Add Course</button>
-      {courses.map((course, index) => {
-        return <Course key={index} courseName={course} />;
-      })}
-      <Course />
+      <button className="appButton" onClick={handleClick}>
+        Add Course
+      </button>
+      <div className='courseList'>{courseList}</div>
     </div>
   );
 }
